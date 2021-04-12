@@ -1,7 +1,7 @@
 {
     "__ASENAJSON__": true,
     "LANGUAGE": "English",
-    "LANGCODE": "en",
+    "LANGCODE": "si",
     "AUTHOR": "AsenaDev",
     "STRINGS": {
         "_asena": {
@@ -80,16 +80,16 @@
             "DYNO_DESC": "Check heroku dyno  භාවිතය",
             "DYNO_TOTAL": "```Total Quota```",
             "DYNO_USED": "```Quota used```",
-            "PERCENTAGE": "```Percentage```",
-            "DYNO_LEFT": "```Remaining```",
+            "PERCENTAGE": "```ප්‍රතිශතය```",
+            "DYNO_LEFT": "```ඉතිරි```",
             "SETVAR_DESC": "Set heroku config var",
             "SET_SUCCESS": "Successfully set ```{} ➜ {}```",
-            "KEY_VAL_MISSING": "```Either Key or Value is missing```",
+            "KEY_VAL_MISSING": "```යතුර හෝ අගය අස්ථානගත වී ඇත```",
             "INVALID": "```Invalid key:value format```",
             "GETVAR_DESC": "Get heroku config var",
             "DELVAR_DESC": "Delete heroku config var",
-            "DEL_SUCCESS": "```{} successfully deleted```",
-            "NOT_FOUND": "```no results found for this key```"           
+            "DEL_SUCCESS": "```{} සාර්ථකව මකා දමන ලදි```",
+            "NOT_FOUND": "```මෙම යතුර සඳහා ප්රතිපල හමු නොවීය```"           
         },
         "filters": {
             "FILTER_DESC": "එය පෙරනයක් එක් කරයි. කවුරුහරි ඔබේ පෙරණය ලියන්නේ නම්, එය පිළිතුර යවයි. ඔබ .filter ලියන්නේ නම්, එය ඔබගේ පෙරහන් ලැයිස්තුව පෙන්වයි.",
@@ -117,11 +117,11 @@
             "GOODBYE_SETTED": "*✅ ආයුබෝවන් පණිවිඩය සාර්ථකව සකසා ඇත!*"
         },
         "lydia": {
-            "ADDLYDIA_DESC": "Activates Lydia (AI) for the user.",
-            "NEED_REPLY": "```Please respond to a user's message!```",
-            "COFFEEHOUSE": "```You haven't defined the Coffehouse API Key! ```",
-            "ENABLED_LYDIA": "```Lydia has been activated for this user!```",
-            "RMLYDIA_DESC": "Makes Lydia disabled for the user.",
+            "ADDLYDIA_DESC": "පරිශීලකයා සඳහා ලිඩියා (AI) සක්‍රීය කරයි.",
+            "NEED_REPLY": "```කරුණාකර පරිශීලක පණිවිඩයකට ප්‍රතිචාර දක්වන්න!```",
+            "COFFEEHOUSE": "```ඔබ කෝෆිහවුස් API යතුර නිර්වචනය කර නැත! ```",
+            "ENABLED_LYDIA": "```මෙම පරිශීලකයා සඳහා ලිඩියා සක්‍රීය කර ඇත!```",
+            "RMLYDIA_DESC": "පරිශීලකයා සඳහා ලිඩියා අක්‍රීය කරයි.",
             "ALREADY_EMPTY": "```Your user list is already empty!```",
             "NOT_ADDED": "```You haven't added this user already!```",
             "DISABLED": "```Lydia has been disabled for this user!```"
