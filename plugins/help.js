@@ -22,7 +22,7 @@ const blTR = "BlockChat botunu belirlediğiniz gruba, kişiye veya birden fazla 
 const sudoTR = "SUDO, botunuzu seçtiğiniz kullanıcıya tüm yetkileri ile paylaşır. Numara sonuna ,0 koyarsanız gruplarda da aktif hale gelir.\nKullanmak için *.setvar SUDO:90xxxx && 90xx,90xxx [ülke kodu ile, (❌ +90xx • ✅ 90xx)]"
 
 const privTR = "Botunuzu private yapmak komutları sadece size özel yapar. Başkaları kullanamaz.\nBotunuzu private yapmak için *.setvar WORK_TYPE:private* komutunu kullanın."
-const privEN = "Making your bot private makes commands private only for you. Anyone cannot use.\nTo make your bot private, type *.setvar WORK_TYPE:private*"
+const privEN = "ඔබේ බොට් පුද්ගලික කිරීම මඟින් විධාන පුද්ගලික වේ. ඕනෑම කෙනෙකුට භාවිතා කළ හැකිය. Bot ඔබේ බොට් පුද්ගලික කිරීමට, ටයිප් කරන්න *.setvar WORK_TYPE:private*"
 const blEN = "ඔබ සඳහන් කරන කණ්ඩායම්, පුද්ගල හෝ බහු කතාබස් වලට බ්ලොක්චැට් බොට් වසා දමයි.\n එය භාවිතා කිරීමට, පළමුව චැට් වෙත ගොස් ටයිප් කරන්න *.jid* ඉන්පසු එන කේතයට පිටපත් කරන්න. (Except @g.us or @whatsapp.net!)\nThen use this command *.setvar BLOCK_CHAT:id && id1,id2..*"
 const sudoEN = "SUDO, ඔබේ බොට් එක ඔබ තෝරාගත් පරිශීලකයාට එහි සියලු බලයන් සමඟ බෙදා ගනී..\nTo use, type *.setvar SUDO:94xxxx && 94xx,94xxx [with county code, (❌ +94xx • ✅ 94xx)]*"
 
