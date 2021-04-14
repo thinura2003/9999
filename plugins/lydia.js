@@ -1,9 +1,10 @@
-/* Copyright (C) 2020 Yusuf Usta.
+/*# Exclusively from danuma project 
+# Do not use this fore any commercial thing
+# If you abuse thais bot we wil kick you from bot 
+# Do not edit (Respect to the Devaoloper) 
+# All rights reserved ©Lasiya @lasiya99X t.me/lasiya99X
+# Get more about devaoloper https://lasiya.ml
 
-Licensed under the  GPL-3.0 License;
-you may not use this file except in compliance with the License.
-
-WhatsAsena - Yusuf Usta
 */
 
 const Asena = require('../events');
@@ -15,7 +16,7 @@ const {LydiaAI} = require('coffeehouse');
 const Language = require('../language');
 const Lang = Language.getString('lydia');
 
-Asena.addCommand({pattern: 'addlydia$', fromMe: true, desc: Lang.ADDLYDIA_DESC}, (async (message, match) => {
+Asena.addCommand({pattern: 'addai$', fromMe: true, desc: Lang.ADDLYDIA_DESC}, (async (message, match) => {
     if (!message.reply_message) return await message.reply(Lang.NEED_REPLY);
     if (!Config.COFFEEHOUSE_API_KEY) return await message.client.sendMessage(message.jid, '```You Must Set an API KEY!```\nhttps://github.com/phaticusthiccy/WhatsAsenaDuplicated/wiki/LYDIA-API-KEY', MessageType.text);
 
@@ -39,7 +40,7 @@ Asena.addCommand({pattern: 'addlydia$', fromMe: true, desc: Lang.ADDLYDIA_DESC},
     return await message.reply(Lang.ENABLED_LYDIA);
 }));
 
-Asena.addCommand({pattern: 'rmlydia$', fromMe: true, desc: Lang.RMLYDIA_DESC}, (async (message, match) => {
+Asena.addCommand({pattern: 'rmai$', fromMe: true, desc: Lang.RMLYDIA_DESC}, (async (message, match) => {
     if (!message.reply_message) return await message.reply(Lang.NEED_REPLY);
     if (!Config.COFFEEHOUSE_API_KEY) return await message.client.sendMessage(message.jid, '```You Must Set an API KEY!```\nhttps://github.com/phaticusthiccy/WhatsAsenaDuplicated/wiki/LYDIA-API-KEY', MessageType.text);
 
