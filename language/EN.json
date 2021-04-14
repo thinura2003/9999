@@ -219,12 +219,12 @@
         "weather": {
             "WEATHER_DESC": "Shows the weather.",
             "NEED_LOCATION": "* Please write a location!*\n*Example:* ```.weather Bakü```",
-            "LOCATION": "Location",
-            "TEMP": "Temperature",
-            "DESC": "Description",
-            "HUMI": "Humidity",
-            "WIND": "Wind Speed",
-            "CLOUD": "Cloud",
+            "LOCATION": "Location🚩",
+            "TEMP": "Temperature🌡️",
+            "DESC": "Description💁‍♂️",
+            "HUMI": "Humidity🍃",
+            "WIND": "Wind Speed🌬️",
+            "CLOUD": "Clouds⛅",
             "NOT_FOUND": "```I couldn't find a city with this name. 😖```"
         },
         "web": {
@@ -420,7 +420,7 @@
             "NOT_FOUND":"User not found: "
         },
         "github": {
-            "GİTHUB_DESC": "Collects github information from the given username.\n⌨️ Example: .github phaticusthiccy",
+            "GİTHUB_DESC": "Collects github information from the given username.\n⌨️ Example: .github SLdevilX",
             "REPLY": "```You Need To Type Any Username!```",
             "NOT": "```User not found!```",
             "FOLLOWERS": "Followers:",
