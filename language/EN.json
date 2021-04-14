@@ -120,11 +120,12 @@
             "ADDLYDIA_DESC": "පරිශීලකයා සඳහා ලිඩියා (AI) සක්‍රීය කරයි.",
             "NEED_REPLY": "```කරුණාකර පරිශීලක පණිවිඩයකට ප්‍රතිචාර දක්වන්න!```",
             "COFFEEHOUSE": "```ඔබ කෝෆිහවුස් API යතුර නිර්වචනය කර නැත! ```",
-            "ENABLED_LYDIA": "```මෙම පරිශීලකයා සඳහා ලිඩියා සක්‍රීය කර ඇත!```",
-            "RMLYDIA_DESC": "පරිශීලකයා සඳහා ලිඩියා අක්‍රීය කරයි.",
+            "ENABLED_LYDIA": "```කෘතීම බුද්ධි සහය සක්‍රීය කරනලදී```\n *Ai asitant enabled to this user*\n _Support  only with an English_",
+            "RMLYDIA_DESC": "```කෘතීම බුද්ධි සහය  අවසන් කරනලදි``` \n *Ai asinstant closed*",
             "ALREADY_EMPTY": "```Your user list is already empty!```",
             "NOT_ADDED": "```You haven't added this user already!```",
-            "DISABLED": "```Lydia has been disabled for this user!```"
+            "DISABLED": "*Ai asinstant closed*"
+            
         },
         "memes": {
             "MEMES_DESC": "Photo memes you replied to.",
