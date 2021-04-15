@@ -1,8 +1,10 @@
 /* 
-Heroku plugin for WhatsAsena - W4RR10R
-Licensed under the  GPL-3.0 License;
-you may not use this file except in compliance with the License.
-WhatsAsena - Yusuf Usta
+# Exclusively from danuma project 
+# Do not use this fore any commercial thing
+# If you abuse thais bot we wil kick you from bot 
+# Do not edit (Respect to the Devaoloper) 
+# All rights reserved ©Lasiya @lasiya99X t.me/lasiya99X
+# Get more about devaoloper https://lasiya.ml
 */
 
 const Asena = require('../events');
