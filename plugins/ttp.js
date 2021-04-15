@@ -121,7 +121,7 @@ else if (Config.WORKTYPE == 'public') {
         await message.client.sendMessage(message.jid,Buffer.from(ttinullimage.data), MessageType.sticker, { mimetype: Mimetype.webp })
 
     }));
-    Asena.addCommand({ pattern: 'wood ?(.*)', fromMe: true, desc: Lang.WOOD_DESC }, (async (message, match) => {
+    Asena.addCommand({ pattern: 'wood ?(.*)', fromMe: false, desc: Lang.WOOD_DESC }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -131,7 +131,7 @@ else if (Config.WORKTYPE == 'public') {
 
     }));
     
-    Asena.addCommand({ pattern: 'pubg ?(.*)', fromMe: true, desc: Lang.PUBG_DESC }, (async (message, match) => {
+    Asena.addCommand({ pattern: 'pubg ?(.*)', fromMe: false, desc: Lang.PUBG_DESC }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -141,7 +141,7 @@ else if (Config.WORKTYPE == 'public') {
 
     }));
     
-    Asena.addCommand({ pattern: 'love ?(.*)', fromMe: true, desc: Lang.LOVE_DESC }, (async (message, match) => {
+    Asena.addCommand({ pattern: 'love ?(.*)', fromMe: false, desc: Lang.LOVE_DESC }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -151,7 +151,7 @@ else if (Config.WORKTYPE == 'public') {
 
     }));
     
-    Asena.addCommand({ pattern: 'ttok ?(.*)', fromMe: true, desc: Lang.TTOK_DESC }, (async (message, match) => {
+    Asena.addCommand({ pattern: 'ttok ?(.*)', fromMe: false, desc: Lang.TTOK_DESC }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
