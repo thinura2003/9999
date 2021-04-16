@@ -44,7 +44,7 @@ if (Config.WORKTYPE == 'private') {
             );
         
             await message.client.sendMessage(
-                message.jid,'╔════════════════════════╗\n  ●▬▬ *X-Troid PVT  Bot* ▬▬●\n\n' + CMD_HELP, MessageType.text
+                message.jid,'╔════════════════════╗\n  ●▬▬ *X-Troid PVT  Bot* ▬▬●\n\n' + CMD_HELP, MessageType.text
             );    
         } else {
 
