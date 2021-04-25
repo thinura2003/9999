@@ -9,7 +9,7 @@ const Lang = Language.getString('ttp');
 
 if (Config.WORKTYPE == 'private') {
 
-Asena.addCommand({ pattern: 'sky ?(.*)', fromMe: true, desc: Lang.BT_DESC }, (async (message, match) => {
+Asena.addCommand({ pattern: 'sky ?(.*)', fromMe: true, desc: Lang.SKY_DESC }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -22,7 +22,7 @@ Asena.addCommand({ pattern: 'sky ?(.*)', fromMe: true, desc: Lang.BT_DESC }, (as
 
 else if (Config.WORKTYPE == 'public') {
 
-Asena.addCommand({ pattern: 'sky ?(.*)', fromMe: false, desc: Lang.PUBG_DESC }, (async (message, match) => {
+Asena.addCommand({ pattern: 'sky ?(.*)', fromMe: false, desc: Lang.SKY_DESC }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
