@@ -69,7 +69,7 @@ if (Config.WORKTYPE == 'private') {
 
     }));
     
-    Asena.addCommand({ pattern: 'bt ?(.*)', fromMe: true, desc: Lang.PUBG_DESC }, (async (message, match) => {
+    Asena.addCommand({ pattern: 'bt ?(.*)', fromMe: true, desc: Lang.BT_DESC }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -151,7 +151,7 @@ else if (Config.WORKTYPE == 'public') {
 
     }));
     
-    Asena.addCommand({ pattern: 'bt ?(.*)', fromMe: false, desc: Lang.PUBG_DESC }, (async (message, match) => {
+    Asena.addCommand({ pattern: 'bt ?(.*)', fromMe: false, desc: Lang.BT_DESC }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
