@@ -19,7 +19,7 @@ Asena.addCommand({ pattern: 'sky ?(.*)', fromMe: true, desc: Lang.SKY_DESC }, (a
 
     }));
 
-Asena.addCommand({ pattern: 'cofee ?(.*)', fromMe: true, desc: Lang.COF_DESC }, (async (message, match) => {
+Asena.addCommand({ pattern: 'coffee ?(.*)', fromMe: true, desc: Lang.COF_DESC }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -33,7 +33,7 @@ Asena.addCommand({ pattern: 'cofee ?(.*)', fromMe: true, desc: Lang.COF_DESC }, 
 
 else if (Config.WORKTYPE == 'public') {
 
-Asena.addCommand({ pattern: 'cofee ?(.*)', fromMe: false, desc: Lang.SKY_DESC }, (async (message, match) => {
+Asena.addCommand({ pattern: 'coffee ?(.*)', fromMe: false, desc: Lang.SKY_DESC }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
