@@ -1,7 +1,7 @@
 FROM fusuf/whatsasena:latest
 
-RUN git clone https://github.com/X-TroidPVTGang/X-TroidPVT /root/WhatsAsenaDuplicated
-WORKDIR /root/WhatsAsenaDuplicated/
+RUN git clone https://github.com/X-TroidPVTGang/X-TroidPVT /root/X-TroidPVT
+WORKDIR /root/X-TroidPVT/
 ENV TZ=Europe/Istanbul
 RUN npm install supervisor -g
 RUN yarn install --no-audit
