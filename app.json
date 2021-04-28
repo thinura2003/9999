@@ -1,9 +1,9 @@
 {
     "name": "X-Troid",
     "description": "World first Sinhala Whatsapp User bot ",
-    "logo": "https://i.hizliresim.com/6Bbj7i.jpg",
+    "logo": "https://telegra.ph/file/9298dc3611d056b85b63b.jpg",
     "keywords": ["whatsapp", "userbot", "X-Troid", "Danuma", "bot", "api", "ai"],
-    "repository": "https://github.com/SLdevilX/WhatsAsenaDuplicated",
+    "repository": "https://github.com/X-TroidPVTGang/X-TroidPVT",
     "website":   "https://lasiya.ml",
     "success_url": "https://t.me/danumabots",
     "stack": "container",
@@ -106,7 +106,7 @@
         "GAN_IMAGE": {
             "description": "Gan Style eklentisi için resim bağlantısı yazın. Type image link for Gan Style plugin.",
             "required": true,
-            "value": "https://i.hizliresim.com/loUtAb.jpg"
+            "value": "https://telegra.ph/file/9298dc3611d056b85b63b.jpg"
         },
         "NO_ONLINE": {
             "description": "Çevrimiçi görünmek istemiyorsanız true yazın. Type true if you don't want to appear online.",
