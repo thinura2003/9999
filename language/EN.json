@@ -63,6 +63,15 @@
             "SECOND": "තත්පර",
             "AGO": " පෙර```"
         },
+        "whois": {
+            "PL_DESC": "Displays metadata data of group or person.",
+            "SUB": "*Group Name:* ",
+            "DES": "*Group Description:* ",
+            "OWN": "*Founder:* ",
+            "COD": "*Unique Group Code:* ",
+            "JİD": "*Person JID:* ",
+            "ST": "*Person Status:* "
+        },
         "evaluators": {
             "TERM_DESC": "සේවාදායකයේ කවචයේ විධානය ක්‍රියාත්මක කිරීමට ඉඩ දෙන්න.",
             "GIVE_ME_CODE": "*මට කේතයක් දෙන්න!*"
