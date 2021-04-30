@@ -64,13 +64,13 @@
             "AGO": " පෙර```"
         },
         "whois": {
-            "PL_DESC": "Displays metadata data of group or person.",
-            "SUB": "*Group Name:* ",
-            "DES": "*Group Description:* ",
-            "OWN": "*Founder:* ",
-            "COD": "*Unique Group Code:* ",
-            "JİD": "*Person JID:* ",
-            "ST": "*Person Status:* "
+            "PL_DESC": "කණ්ඩායමේ හෝ පුද්ගලයාගේ තොරතුරු  පෙන්වයි",
+            "SUB": "*කණ්ඩායමේ නම:* ",
+            "DES": "*කණ්ඩායමේ විස්තරය:* ",
+            "OWN": "*නිර්මාතෘ:* ",
+            "COD": "*අද්විතීය කණ්ඩායම් කේතය:* ",
+            "JİD": "*පද්ගල කේතය:* ",
+            "ST": "*පුද්ගල තත්වය:* "
         },
         "evaluators": {
             "TERM_DESC": "සේවාදායකයේ කවචයේ විධානය ක්‍රියාත්මක කිරීමට ඉඩ දෙන්න.",
@@ -86,17 +86,17 @@
             "RESTART_MSG": "```නැවත ආරම්භ කිරීම...```",
             "SHUTDOWN_DESC": "වසා දැමීම X-Troid",
             "SHUTDOWN_MSG": "```වසා දමයි ⛔```",
-            "DYNO_DESC": "Check heroku dyno  භාවිතය",
-            "DYNO_TOTAL": "```Total Quota```",
-            "DYNO_USED": "```Quota used```",
+            "DYNO_DESC": "හෙරොකු ඩයිනෝ භාවිතය",
+            "DYNO_TOTAL": "```සංපූර්ණ ප්‍රමාණය```",
+            "DYNO_USED": "```බවිතා කල ප්‍රමාණය```",
             "PERCENTAGE": "```ප්‍රතිශතය```",
             "DYNO_LEFT": "```ඉතිරි```",
-            "SETVAR_DESC": "Set heroku config var",
-            "SET_SUCCESS": "Successfully set ```{} ➜ {}```",
+            "SETVAR_DESC": "config var සෑදීමට",
+            "SET_SUCCESS": "සාර්ථකව එකතු කරන ලදී ```{} ➜ {}```",
             "KEY_VAL_MISSING": "```යතුර හෝ අගය අස්ථානගත වී ඇත```",
-            "INVALID": "```Invalid key:value format```",
-            "GETVAR_DESC": "Get heroku config var",
-            "DELVAR_DESC": "Delete heroku config var",
+            "INVALID": "```වැරදි යතුරක් හෝ :වැරදි අගයකි```",
+            "GETVAR_DESC": "config var ලබාගැනීම",
+            "DELVAR_DESC": "config var මකාදැමීම",
             "DEL_SUCCESS": "```{} සාර්ථකව මකා දමන ලදි```",
             "NOT_FOUND": "```මෙම යතුර සඳහා ප්රතිපල හමු නොවීය```"           
         },
@@ -131,18 +131,18 @@
             "COFFEEHOUSE": "```ඔබ කෝෆිහවුස් API යතුර නිර්වචනය කර නැත! ```",
             "ENABLED_LYDIA": "```කෘතීම බුද්ධි සහය සක්‍රීය කරනලදී```\n *Ai asitant enabled to this user*\n _Support  only with an English_",
             "RMLYDIA_DESC": "```කෘතීම බුද්ධි සහය  අවසන් කරනලදි``` \n *Ai asinstant closed*",
-            "ALREADY_EMPTY": "```Your user list is already empty!```",
-            "NOT_ADDED": "```You haven't added this user already!```",
-            "DISABLED": "*Ai asinstant closed*"
+            "ALREADY_EMPTY": "```ඔබගේ පරිශීලක ලැයිස්තුව දැනටමත් හිස් ය!```",
+            "NOT_ADDED": "```ඔබ දැනටමත් මෙම පරිශීලකයා එකතු කර නැත!```",
+            "DISABLED": "*Ai asinstant වසා ඇත*"
             
         },
         "memes": {
-            "MEMES_DESC": "Photo memes you replied to.",
-            "NEED_REPLY": "*Reply to a photo!*",
-            "DOWNLOADING": "```Downloading media & making meme...```"
+            "MEMES_DESC": "ඔබ පිළිතුරු දුන් ඡායාරූප මිම්ස්.",
+            "NEED_REPLY": "*ඡායාරූපයකට රිප්ලයිකරන්න!*",
+            "DOWNLOADING": "```meme මාධ්‍ය බාගත කිරීම සහ සෑදීම```"
         },
         "ocr": {
-            "OCR_DESC": "Reads the text on the photo you have replied.",
+            "OCR_DESC": "ඔබ පිළිතුරු දුන් ඡායාරූපයෙහි පෙළ කියවයි.",
             "NEED_REPLY": "*Reply to a photo!*",
             "DOWNLOADING": "```Media is downloading & reading...```",
             "ERROR": "```I couldn't read this :/```\n*Error:*```{}```",
