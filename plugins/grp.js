@@ -6,7 +6,7 @@ const Language = require('../language');
 
 Asena.addCommand({pattern: 'grp', fromMe: true, deleteCommand: false,}, (async (message, match) => {
 
-  var msg = await message.reply('```wait...```');
+  var msg = await message.reply('```getting links...```');
 
   await msg.delete();
 
