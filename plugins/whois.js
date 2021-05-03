@@ -11,7 +11,7 @@ const Lang = Language.getString('whois'); // Language Support
 
 if (CON.WORKTYPE == 'private') {
 
-    Asena.addCommand({ pattern: 'info', fromMe: true,deleteCommand: false, desc: Lang.PL_DESC }, async (message, match) => { 
+    Asena.addCommand({ pattern: 'info', fromMe: true,deleteCommand: false,deleteCommand: false,desc: Lang.PL_DESC }, async (message, match) => { 
 
         if (message.jid.includes('-')) {
             var json = await message.client.groupMetadataMinimal(message.jid) 
