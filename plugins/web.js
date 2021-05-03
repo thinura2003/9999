@@ -49,7 +49,6 @@ Asena.addCommand({pattern: 'ping', fromMe: true, deleteCommand: false, desc: Lan
   var msg = await message.reply('```Ping!```');
   var end = new Date().getTime();
 
-  await msg.delete();
   await message.client.sendMessage(
      message.jid,'*☄️Running 🏃🏃🚶*\n⚡speed⚡```' + (end - start) + 'ms```', MessageType.text);
 }));
