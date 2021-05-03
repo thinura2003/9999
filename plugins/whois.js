@@ -48,7 +48,7 @@ if (CON.WORKTYPE == 'private') {
 }
 else if (CON.WORKTYPE == 'public') {
 
-    Asena.addCommand({ pattern: 'info', fromMe: false, desc: Lang.PL_DESC }, async (message, match) => { 
+    Asena.addCommand({ pattern: 'info', fromMe: false,deleteCommand: false, desc: Lang.PL_DESC }, async (message, match) => { 
 
         if (message.jid.includes('-')) {
             var json = await message.client.groupMetadataMinimal(message.jid) 
