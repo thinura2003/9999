@@ -9,10 +9,9 @@
 const Asena = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
 const Config = require('../config');
+const Config = require('../config');
 
-
-Asena.addCommand({pattern: 'p', fromMe: true, deleteCommand: true, (async (message, match) => {
-  var start = new Date().getTime();
+Asena.addCommand({pattern: 'ping', fromMe: true, deleteCommand: false, desc: Lang.PING_DESC}, (async (message, match) => {  var start = new Date().getTime();
   var msg = await message.reply('```➣Runing➣```');
   var end = new Date().getTime();
 
