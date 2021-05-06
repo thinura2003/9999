@@ -32,7 +32,7 @@ Asena.addCommand({pattern: 'alive', fromMe: true, deleteCommand: true,}, (async 
 
 var i = Math.floor(20*Math.random())
 var respoimage = await axios.get(`${r_text[i]}`, { responseType: 'arraybuffer' })
-await message.client.sendMessage(message.jid, Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.png, caption: '            *Quinn lเzค* \n      *Privert Assistant*\n\n*Hosted* • ๛```Aws```\n*Version* • ๛ ```'+Config.VERSION+'```\n*Branch* • ๛ ```'+Config.BRANCH+'```\n*About* • ๛```lasiya.ml```\n*Owner* ๛ t.me/lasi99X\n*Moder.* ๛ t.me/SL_MG×03\n*Main Group* ๛\nt.me/danuma01'})
+await message.client.sendMessage(message.jid, Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.png, caption: '            *Quinn lเzค* \n      *Privert Assistant*\n\n*Hosted* • ๛```Aws```\n*Version* • ๛ ```'+Config.VERSION+'```\n*Branch* • ๛ ```'+Config.BRANCH+'```\n*About* • ๛```lasiya.ml```\n*Owner* ๛ t.me/lasi99X\n*Moder.*\n ๛ t.me/SL_MG×03\n ๛ t.me/lucy_99X\n*Main Group* ๛\nt.me/danuma01'})
     }));
 }
 else if (Config.WORKTYPE == 'public') {
@@ -63,6 +63,6 @@ else if (Config.WORKTYPE == 'public') {
 
 var i = Math.floor(20*Math.random())
 var respoimage = await axios.get(`${r_text[i]}`, { responseType: 'arraybuffer' })
-await message.client.sendMessage(message.jid, Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.png, caption: '            *Quinn lเzค* \n      *Public Assistant*\n\n*Hosted* • ๛```Aws```\n*Version* • ๛ ```'+Config.VERSION+'```\n*Branch* • ๛ ```'+Config.BRANCH+'```\n*About* • ๛```lasiya.ml```\n*Owner* ๛ t.me/lasi99X\n*Moder.* ๛ t.me/SL_MG×03\n*Main Group* ๛\nt.me/danuma01'})
+await message.client.sendMessage(message.jid, Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.png, caption: '            *Quinn lเzค* \n      *Public Assistant*\n\n*Hosted* • ๛```Aws```\n*Version* • ๛ ```'+Config.VERSION+'```\n*Branch* • ๛ ```'+Config.BRANCH+'```\n*About* • ๛```lasiya.ml```\n*Owner* ๛ t.me/lasi99X\n*Moder.* \n ๛ t.me/SL_MG×03\n ๛ t.me/lucy_99X\n*Main Group* ๛\nt.me/danuma01'})
     }));
 }
