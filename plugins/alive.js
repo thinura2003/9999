@@ -6,7 +6,7 @@ const Config = require('../config');
 
 if (Config.WORKTYPE == 'private') {
 	
-Asena.addCommand({pattern: 'alive', fromMe: false, deleteCommand: false,}, (async (message, match) => {
+Asena.addCommand({pattern: 'alive', fromMe: true, deleteCommand: false,}, (async (message, match) => {
 
 	        var r_text = new Array ();
 
