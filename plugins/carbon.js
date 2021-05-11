@@ -18,7 +18,7 @@ const Lang = Language.getString('carbon');
 
 if (Config.WORKTYPE == 'private') {
 
-    Asena.addCommand({pattern: 'carbon ?(.*)', fromMe: true, desc: Lang.CARBON_DESC, }, (async (message, match) => {
+    Asena.addCommand({pattern: 'carbon ?(.*)', fromMe: true, desc: Lang.CARBON_DESC }, (async (message, match) => {
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.CARBON_NEEDWORD, MessageType.text);
 
@@ -42,7 +42,7 @@ if (Config.WORKTYPE == 'private') {
 }
 else if (Config.WORKTYPE == 'public') {
 
-    Asena.addCommand({pattern: 'carbon ?(.*)', fromMe: false, desc: Lang.CARBON_DESC, warn: }, (async (message, match) => {
+    Asena.addCommand({pattern: 'carbon ?(.*)', fromMe: false, desc: Lang.CARBON_DESC}, (async (message, match) => {
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.CARBON_NEEDWORD, MessageType.text);
 
