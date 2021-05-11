@@ -32,7 +32,7 @@ if (Config.WORKTYPE == 'private') {
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD, MessageType.text);
                 var XX = match[1]
-        var ttinullimage = await axios.get(`https://api.xteam.xyz/attp?file&text=${encodeURIComponent.{match[1]}`, { responseType: 'arraybuffer' })
+        var ttinullimage = await axios.get(`https://api.xteam.xyz/attp?file&text=${encodeURIComponent(match[1])}`, { responseType: 'arraybuffer' })
 
 
         await message.client.sendMessage(message.jid,Buffer.from(ttinullimage.data), MessageType.sticker, { mimetype: Mimetype.webp })
