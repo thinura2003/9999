@@ -514,7 +514,7 @@ if (config.WORKTYPE == 'private') {
 }
 else if (config.WORKTYPE == 'public') {
 
-    Asena.addCommand({pattern: 'trt(?: |$)(\\S*) ?(\\S*)', desc: Lang.TRANSLATE_DESC, usage: Lang.TRANSLATE_USAGE, fromMe: false}, (async (message, match) => {
+    Asena.addCommand({pattern: 'tr(?: |$)(\\S*) ?(\\S*)', desc: Lang.TRANSLATE_DESC, usage: Lang.TRANSLATE_USAGE, fromMe: false}, (async (message, match) => {
 
         if (!message.reply_message) {
             return await message.client.sendMessage(message.jid,Lang.NEED_REPLY,MessageType.text);
