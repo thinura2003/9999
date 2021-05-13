@@ -48,7 +48,7 @@ var gis = require('g-i-s');
 
 if (config.WORKTYPE == 'private') {
 
-    Asena.addCommand({pattern: 'trt(?: |$)(\\S*) ?(\\S*)', desc: Lang.TRANSLATE_DESC, usage: Lang.TRANSLATE_USAGE, fromMe: true}, (async (message, match) => {
+    Asena.addCommand({pattern: 'tr(?: |$)(\\S*) ?(\\S*)', desc: Lang.TRANSLATE_DESC, usage: Lang.TRANSLATE_USAGE, fromMe: true}, (async (message, match) => {
 
         if (!message.reply_message) {
             return await message.client.sendMessage(message.jid,Lang.NEED_REPLY,MessageType.text);
@@ -89,7 +89,7 @@ if (config.WORKTYPE == 'private') {
         }
     }));
 
-    if (config.LANG == 'TR' || config.LANG == 'AZ') {
+    if (config.LANG == 'EN' || config.LANG == 'SI') {
 
         Asena.addCommand({pattern: 'tts (.*)', fromMe: true, desc: Lang.TTS_DESC}, (async (message, match) => {
 
@@ -97,7 +97,7 @@ if (config.WORKTYPE == 'private') {
                 return;
     
             let 
-                LANG = 'tr',
+                LANG = 'en',
                 ttsMessage = match[1],
                 SPEED = 1.0
 
