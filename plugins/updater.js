@@ -20,7 +20,7 @@ const Language = require('../language');
 const Lang = Language.getString('updater');
 
 
-Asena.addCommand({pattern: 'up$', fromMe: true, desc: Lang.UPDATER_DESC}, (async (message, match) => {
+Asena.addCommand({pattern: 'update$', fromMe: true, desc: Lang.UPDATER_DESC}, (async (message, match) => {
     await git.fetch();
     var commits = await git.log([Config.BRANCH + '..origin/' + Config.BRANCH]);
     if (commits.total === 0) {
@@ -43,7 +43,7 @@ Asena.addCommand({pattern: 'up$', fromMe: true, desc: Lang.UPDATER_DESC}, (async
     }
 }));
 
-Asena.addCommand({pattern: 'up now$', fromMe: true, desc: Lang.UPDATE_NOW_DESC, dontAddCommandList: true}, (async (message, match) => {
+Asena.addCommand({pattern: 'update now$', fromMe: true, desc: Lang.UPDATE_NOW_DESC}, (async (message, match) => {
     await git.fetch();
     var commits = await git.log([Config.BRANCH + '..origin/' + Config.BRANCH]);
     if (commits.total === 0) {
@@ -57,8 +57,11 @@ Asena.addCommand({pattern: 'up now$', fromMe: true, desc: Lang.UPDATE_NOW_DESC, 
             try {
                 var app = await heroku.get('/apps/' + Config.HEROKU.APP_NAME)
             } catch {
-                return await message.client.sendMessage(
+                await message.client.sendMessage(
                     message.jid,Lang.INVALID_HEROKU, MessageType.text);
+                await new Promise(r => setTimeout(r, 1000));
+                return await message.client.sendMessage(
+                    message.jid,Lang.IN_AF, MessageType.text);
             }
 
             git.fetch('upstream', Config.BRANCH);
