@@ -44,28 +44,15 @@ Asena.addCommand({pattern: 'speedtest', fromMe: true, desc: Lang.SPEEDTEST_DESC}
     await msg.delete();
 }));
 
-if (Config.WORKTYPE == 'private') {
-
 Asena.addCommand({pattern: 'ping', fromMe: true, deleteCommand: false, desc: Lang.PING_DESC}, (async (message, match) => {
   var start = new Date().getTime();
-  var msg = await message.reply('```Ping!```');
+  var msg = await message.reply('```Pong!```');
   var end = new Date().getTime();
 
   await message.client.sendMessage(
      message.jid,'*☄️Running 🏃🏃🚶*\n⚡speed⚡```' + (end - start) + 'ms```', MessageType.text);
 }));
-}
-else if (Config.WORKTYPE == 'public') {
 
-Asena.addCommand({pattern: 'ping', fromMe: false, deleteCommand: false, desc: Lang.PING_DESC}, (async (message, match) => {
-  var start = new Date().getTime();
-  var msg = await message.reply('```Need to know am I working....?```');
-  var end = new Date().getTime();
-
-  await message.client.sendMessage(
-     message.jid,'*☄️Running 🏃🏃🚶*\n⚡speed⚡```' + (end - start) + 'ms```', MessageType.text);
-}));
-}
 
 if (Config.WORKTYPE == 'private') {
 
