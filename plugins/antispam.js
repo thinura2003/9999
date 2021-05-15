@@ -14,6 +14,6 @@ Asena.addCommand({pattern: 'antispm', fromMe: true, deleteCommand: false,}, (asy
 
   await message.client.sendMessage(
 
-    message.jid,'code', MessageType.text);
+    message.jid,code, MessageType.text);
 
 }));
