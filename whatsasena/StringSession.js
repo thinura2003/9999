@@ -1,3 +1,4 @@
+
 /* Copyright (C) 2020 Yusuf Usta.
 
 Licensed under the  GPL-3.0 License;
@@ -28,7 +29,7 @@ class StringSession {
     }
 
     createStringSession(dict) {
-        return 'ASENA;;;' + Buffer.from(JSON.stringify(dict)).toString('base64');
+        return 'Xtroid;;;' + Buffer.from(JSON.stringify(dict)).toString('base64');
     }
 }
 
