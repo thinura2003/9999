@@ -26,7 +26,7 @@ const { errorMessage, infoMessage } = require('../helpers')
         await message.client.sendMessage(message.jid, MessageType.text)
 
         await axios
-          .get(`https://api.lolhuman.xyz/api/facebook2?apikey=264702c251ae9c86e4673dab&url=${userName}&APIKEY=ab9942f95c09ca89`)
+          .get(`https://api.lolhuman.xyz/api/facebook2?apikey=264702c251ae9c86e4673dab&url=${userName}`)
           .then(async (response) => {
             const {
               server_1,
