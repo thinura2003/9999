@@ -9,7 +9,7 @@ const Lang = Language.getString('ttp');
 
 if (Config.WORKTYPE == 'private') {
 
-Asena.addCommand({ pattern: 'sky ?(.*)', fromMe: true, desc: Lang.SKY_DESC }, (async (message, match) => {
+Asena.addCommand({ pattern: 'zsky ?(.*)', fromMe: true, desc: Lang.SKY_DESC }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -19,7 +19,7 @@ Asena.addCommand({ pattern: 'sky ?(.*)', fromMe: true, desc: Lang.SKY_DESC }, (a
 
     }));
         
-        Asena.addCommand({ pattern: 'logo ?(.*)', fromMe: true, desc: Lang.SKY_DESC }, (async (message, match) => {
+        Asena.addCommand({ pattern: 'zlogo ?(.*)', fromMe: true, desc: Lang.SKY_DESC }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -30,7 +30,7 @@ Asena.addCommand({ pattern: 'sky ?(.*)', fromMe: true, desc: Lang.SKY_DESC }, (a
     }));
 
 
-Asena.addCommand({ pattern: 'coffee ?(.*)', fromMe: true, desc: Lang.COF_DESC }, (async (message, match) => {
+Asena.addCommand({ pattern: 'zccf ?(.*)', fromMe: true, desc: Lang.COF_DESC }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -44,7 +44,7 @@ Asena.addCommand({ pattern: 'coffee ?(.*)', fromMe: true, desc: Lang.COF_DESC },
 
 else if (Config.WORKTYPE == 'public') {
 
-Asena.addCommand({ pattern: 'coffee ?(.*)', fromMe: false, desc: Lang.SKY_DESC }, (async (message, match) => {
+Asena.addCommand({ pattern: 'zccf ?(.*)', fromMe: false, desc: Lang.SKY_DESC }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -54,7 +54,7 @@ Asena.addCommand({ pattern: 'coffee ?(.*)', fromMe: false, desc: Lang.SKY_DESC }
 
     }));
         
-        Asena.addCommand({ pattern: 'logo ?(.*)', fromMe: false, desc: Lang.SKY_DESC }, (async (message, match) => {
+        Asena.addCommand({ pattern: 'zlogo ?(.*)', fromMe: false, desc: Lang.SKY_DESC }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -64,7 +64,7 @@ Asena.addCommand({ pattern: 'coffee ?(.*)', fromMe: false, desc: Lang.SKY_DESC }
 
     }));
 
-Asena.addCommand({ pattern: 'sky ?(.*)', fromMe: false, desc: Lang.COF_DESC }, (async (message, match) => {
+Asena.addCommand({ pattern: 'zsky ?(.*)', fromMe: false, desc: Lang.COF_DESC }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
