@@ -47,4 +47,3 @@ const Tlang = Language.getString('tiktok')
           )
       },
     )
-}
