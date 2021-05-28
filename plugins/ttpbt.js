@@ -16,7 +16,7 @@ const Config = require('../config');
 
 if (Config.WORKTYPE == 'private') {
 
-    Asena.addCommand({ pattern: 'tbt ?(.*)', fromMe: true, deleteCommand: false, }, (async (message, match) => {
+    Asena.addCommand({ pattern: 'zbt ?(.*)', fromMe: true, deleteCommand: false, }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage();
 
@@ -29,7 +29,7 @@ if (Config.WORKTYPE == 'private') {
 
 else if (Config.WORKTYPE == 'public') {
 
-    Asena.addCommand({ pattern: 'tbt ?(.*)', fromMe: false,deleteCommand: false, }, (async (message, match) => {
+    Asena.addCommand({ pattern: 'zbt ?(.*)', fromMe: false,deleteCommand: false, }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage();
 
