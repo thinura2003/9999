@@ -16,7 +16,7 @@ const ll = "need some word"
 
 if (Config.WORKTYPE == 'private') {
 
-    Asena.addCommand({ pattern: 'mug ?(.*)', fromMe: true, deleteCommand: false,  desc: dd }, (async (message, match) => {
+    Asena.addCommand({ pattern: 'zmug ?(.*)', fromMe: true, deleteCommand: false,  desc: dd }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(ll);
 
@@ -29,7 +29,7 @@ if (Config.WORKTYPE == 'private') {
 
 else if (Config.WORKTYPE == 'public') {
 
-    Asena.addCommand({ pattern: 'mug ?(.*)', fromMe: false,deleteCommand: false, desc: dd}, (async (message, match) => {
+    Asena.addCommand({ pattern: 'zmug ?(.*)', fromMe: false,deleteCommand: false, desc: dd}, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(ll);
 
