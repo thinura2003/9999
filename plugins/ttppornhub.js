@@ -18,7 +18,7 @@ const Lang = Language.getString('ttp');
 
 if (Config.WORKTYPE == 'private') {
 
-    Asena.addCommand({ pattern: 'phub ?(.*)', fromMe: true,}, (async (message, match) => {
+    Asena.addCommand({ pattern: 'zphub ?(.*)', fromMe: true,}, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -31,7 +31,7 @@ if (Config.WORKTYPE == 'private') {
 
 else if (Config.WORKTYPE == 'public') {
 
-    Asena.addCommand({ pattern: 'phub ?(.*)', fromMe: false,}, (async (message, match) => {
+    Asena.addCommand({ pattern: 'zphub ?(.*)', fromMe: false,}, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
