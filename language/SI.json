@@ -142,7 +142,7 @@
             "DOWNLOADING": "```meme මාධ්‍ය බාගත කිරීම සහ සෑදීම```"
         },
         "ocr": {
-            "OCR_DESC": "ඔබ පිළිතුරු දුන් ඡායාරූපයෙහි පෙළ කියවයි.",
+            "OCR_DESC": "Reads the text on the photo you have replied.",
             "NEED_REPLY": "*Reply to a photo!*",
             "DOWNLOADING": "```Media is downloading & reading...```",
             "ERROR": "```I couldn't read this :/```\n*Error:*```{}```",
