@@ -18,7 +18,7 @@ const Lang = Language.getString('ttp');
 
 if (Config.WORKTYPE == 'private') {
 
-    Asena.addCommand({ pattern: 'wood ?(.*)', fromMe: true, deleteCommand: false,desc: Lang.WOOD_DESC }, (async (message, match) => {
+    Asena.addCommand({ pattern: 'zwood ?(.*)', fromMe: true, deleteCommand: false,desc: Lang.WOOD_DESC }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -31,7 +31,7 @@ if (Config.WORKTYPE == 'private') {
 
 else if (Config.WORKTYPE == 'public') {
 
-    Asena.addCommand({ pattern: 'wood ?(.*)', fromMe: false, deleteCommand: false,desc: Lang.WOOD_DESC }, (async (message, match) => {
+    Asena.addCommand({ pattern: 'zwood ?(.*)', fromMe: false, deleteCommand: false,desc: Lang.WOOD_DESC }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
