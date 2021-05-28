@@ -7,41 +7,22 @@
 # Get more about devaoloper https://lasiya.ml
 */
 
-const Asena = require('../events')
-const { MessageType } = require('@adiwajshing/baileys')
-const axios = require('axios')
-const cn = require('../config');
-
-const Language = require('../language')
-const { errorMessage, infoMessage } = require('../helpers')
-
+const Asena = require('../events');
+const { MessageType, MessageOptions, Mimetype } = require('@adiwajshing/baileys');
+const fs = require('fs');
+const axios = require('axios');
+const Config = require('../config');
+const gg = 'need word'
 
 
-    Asena.addCommand({ pattern: 'fb ?(.*)', fromMe: true, }, async (message, match) => {
 
-        const userName = match[1]
 
-        if (!userName) return await message.client.sendMessage(message.jid, MessageType.text)
+      Asena.addCommand({ pattern: 'fb ?(.*)', fromMe: true, }, (async (message, match) => {
 
-        await message.client.sendMessage(message.jid, MessageType.text)
+        if (match[1] === '') return await message.sendMessage(gg);
 
-        await axios
-          .get(`https://api.lolhuman.xyz/api/facebook2?apikey=264702c251ae9c86e4673dab&url=${userName}`)
-          .then(async (response) => {
-            const {
-              server_1,
-            } = response.data
+        var ttinullimage = await axios.get(`https://api.lolhuman.xyz/api/facebook2?apikey=264702c251ae9c86e4673dab&url=${match[1]}`, { responseType: 'arraybuffer' })
 
-            const profileBuffer = await axios.get(server_1, {
-              responseType: 'arraybuffer',
-            })
+        await message.sendMessage(Buffer.from(ttinullimage.data), MessageType.video, { mimetype: Mimetype.mp4, caption: '🚀Made by X-Troid ☄️' })
 
-            await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {
-              caption: 'Made by X-Troid',
-            })
-          })
-          .catch(
-            async (err) => await message.client.sendMessage(message.jid,userName, MessageType.text),
-          )
-      },
-    )
+    }));
