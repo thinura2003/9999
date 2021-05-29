@@ -35,7 +35,7 @@ else if (Config.WORKTYPE == 'public') {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
-        var ttinullimage = await axios.get(`https://api.lolhuman.xyz/api/textprome2/pornhub?apikey=264702c251ae9c86e4673dab&text1=X-Troid&text2=${encodeURIComponent(match[1])}`, { responseType: 'arraybuffer' })
+        var ttinullimage = await axios.get(`https://api.lolhuman.xyz/api/textprome2/pornhub?apikey=${Api}&text1=X-Troid&text2=${encodeURIComponent(match[1])}`, { responseType: 'arraybuffer' })
 
         await message.sendMessage(Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.jpg, caption: '🚀Made by X-Troid ☄️' })
 
