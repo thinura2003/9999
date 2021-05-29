@@ -14,7 +14,7 @@ const Config = require('../config');
 
 const Language = require('../language');
 const Lang = Language.getString('ttp');
-const Api = (Config.LOL_HM_API_KEY)
+const Api = (Config.LOL_API_KEY)
 
 if (Config.WORKTYPE == 'private') {
 
