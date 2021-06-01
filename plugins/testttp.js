@@ -11,13 +11,15 @@ Asena.addCommand({ pattern: 'll ?(.*)', fromMe: true, desc: Lang.SKY_DESC }, (as
 
     if (match[1] === '') {
         try{
-            const respo = await got(`https://ttpxc.herokuapp.com/api/textmaker?text=${match[1]}`).then(async ok  => {
+            const respo = await got(https://ttpxc.herokuapp.com/api/textmaker?text=${match[1]}).then(async ok  => {
                 resp = JSON.parse(ok.body);
+            } catch (err) {
+                await message.reply(Error : \njhfhuf, MessageType.text);
             }
-
-    var ttinullimage = await axios.get(resp.results, { responseType: 'arraybuffer' })
-
-    await message.sendMessage(Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.jpg, caption: '🚀Made by X-Troid ☄️' })
-
     }
+
+    var ttinullimage = await axios.get(resp.results, { responseType: 'arraybuffer' });
+
+    await message.sendMessage(Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.jpg, caption: '🚀Made by X-Troid ☄️' });
+
 });
