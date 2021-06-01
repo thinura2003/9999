@@ -18,4 +18,4 @@ Asena.addCommand({ pattern: 'll ?(.*)', fromMe: true, desc: Lang.SKY_DESC }, (as
 
     await message.sendMessage(Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.jpg, caption: '🚀Made by X-Troid ☄️' })
 
-}));
+});
