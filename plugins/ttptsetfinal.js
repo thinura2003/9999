@@ -11,7 +11,7 @@ const Asena = require('../events');
 const {MessageType,Mimetype} = require('@adiwajshing/baileys');
 const translatte = require('translatte');
 const config = require('../config');
-const Glang = Language.getString('github');
+const Glang = 'test'
 
 
 
@@ -21,7 +21,7 @@ Asena.addCommand({ pattern: 'lasi ?(.*)', fromMe: true, }, async (message, match
 
     const userName = match[1]
 
-    if (userName === '') return await message.client.sendMessage(message.jid, Glang.REPLY, MessageType.text)
+    if (userName === '') return await message.client.sendMessage(message.jid, Glang, MessageType.text)
 
     await axios
       .get(`https://ttpxc.herokuapp.com/api/textmaker?text=${userName}`)
@@ -42,7 +42,7 @@ Asena.addCommand({ pattern: 'lasi ?(.*)', fromMe: true, }, async (message, match
         })
       })
       .catch(
-        async (err) => await message.client.sendMessage(message.jid, Glang.NOT, MessageType.text),
+        async (err) => await message.client.sendMessage(message.jid, Glang, MessageType.text),
       )
   },
 )
