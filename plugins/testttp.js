@@ -7,12 +7,7 @@ const Config = require('../config');
 const Language = require('../language');
 const Lang = Language.getString('ttp');
 
-
-
-
-
-
-Asena.addCommand({ pattern: 'zsky ?(.*)', fromMe: true, desc: Lang.SKY_DESC }, (async (message, match) => {
+Asena.addCommand({ pattern: 'll ?(.*)', fromMe: true, desc: Lang.SKY_DESC }, (async (message, match) => {
 
     if (match[1] === '') {
         try{
