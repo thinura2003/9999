@@ -37,3 +37,6 @@ else if (Config.WORKTYPE == 'public') {
         var ttinullimage = await axios.get(`https://api.xteam.xyz/textpro/bloodontheroastedglass?text=${encodeURIComponent(match[1])}&APIKEY=ab9942f95c09ca89`, { responseType: 'arraybuffer' })
 
         await message.sendMessage(Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.jpg, caption: '🚀Made by X-Troid ☄️' })
+      
+          }));
+}
