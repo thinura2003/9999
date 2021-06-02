@@ -11,12 +11,12 @@ const { MessageType, MessageOptions, Mimetype } = require('@adiwajshing/baileys'
 const fs = require('fs');
 const axios = require('axios');
 const Config = require('../config');
-const NEED_WORD = "need some word"
+const lol = "need some word"
     
 
     Asena.addCommand({pattern: 'zsp ?(.*)', fromMe: true,}, (async (message, match) => {
 
-    if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
+    if (match[1] === '') return await message.client.sendMessage(message.jid,lol);
   
   var topText, bottomText;
     if (match[1].includes('/')) {
