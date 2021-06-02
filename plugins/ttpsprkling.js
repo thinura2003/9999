@@ -14,18 +14,29 @@ const Config = require('../config');
 const lol = "need some word"
     
 
-    Asena.addCommand({pattern: 'zsp ?(.*)', fromMe: true,}, (async (message, match) => {
+    if (Config.WORKTYPE == 'private') {
 
-    if (match[1] === '') return await message.client.sendMessage(message.jid,lol);
-  
-  var topText, bottomText;
-    if (match[1].includes('/')) {
-        var split = match[1].split('/');
-        bottomText = split[1];
-        topText = split[0];
-}
-    var webimage = await axios.get(`https://docs-jojo.herokuapp.com/api/sparkling?text1=${topText}&text2=${bottomText}`, { responseType: 'arraybuffer' })
+    Asena.addCommand({ pattern: 'zmug ?(.*)', fromMe: true,dontAddCommandList: true}, (async (message, match) => {
 
-    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: '🚀Made by X-Troid ☄️'})
+        if (match[1] === '') return await message.sendMessage(lol);
+
+        var ttinullimage = await axios.get(`https://docs-jojo.herokuapp.com/api/sparkling?text1=${match[1]}&text2=match[1]`, { responseType: 'arraybuffer' })
+
+        await message.sendMessage(Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.jpg, caption: '🚀Made by X-Troid ☄️' })
 
     }));
+}
+
+else if (Config.WORKTYPE == 'public') {
+
+    Asena.addCommand({ pattern: 'zmug ?(.*)', fromMe: false,deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {
+
+        if (match[1] === '') return await message.sendMessage(lol);
+
+        var ttinullimage = await axios.get(`https://docs-jojo.herokuapp.com/api/sparkling?text1=${match[1]}&text2=X-Troid`, { responseType: 'arraybuffer' })
+
+        await message.sendMessage(Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.jpg, caption: '🚀Made by X-Troid ☄️' })
+
+    }));
+    
+}
