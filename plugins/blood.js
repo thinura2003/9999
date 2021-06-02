@@ -12,12 +12,12 @@ const { MessageType, MessageOptions, Mimetype } = require('@adiwajshing/baileys'
 const fs = require('fs');
 const axios = require('axios');
 const Config = require('../config');
-
+const desk = "blood photo with your name"
 
 
 if (Config.WORKTYPE == 'private') {
 
-    Asena.addCommand({ pattern: 'blood ?(.*)', fromMe: true, deleteCommand: false, }, (async (message, match) => {
+    Asena.addCommand({ pattern: 'blood ?(.*)', fromMe: true, desc: desk }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage();
 
@@ -30,7 +30,7 @@ if (Config.WORKTYPE == 'private') {
 
 else if (Config.WORKTYPE == 'public') {
 
-    Asena.addCommand({ pattern: 'blood ?(.*)', fromMe: false,deleteCommand: false, }, (async (message, match) => {
+    Asena.addCommand({ pattern: 'blood ?(.*)', fromMe: false, desc: desk}, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage();
 
