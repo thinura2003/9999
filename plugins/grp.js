@@ -1,12 +1,12 @@
 const Asena = require('../events');
-
+const Config = require('../config');
 const {MessageType} = require('@adiwajshing/baileys');
-
 const Language = require('../language');
+const Lang = Language.getString('_asena');
+
 
 
 if (Config.WORKTYPE == 'private') {
-  
 Asena.addCommand({pattern: 'grp', fromMe: true, deleteCommand: false,}, (async (message, match) => {
   var msg = await message.reply('```getting links...```');
   var groupimg = await axios.get(`https://telegra.ph/file/3073bc9bf04f00fead6a4.jpg`, { responseType: 'arraybuffer' })
@@ -14,7 +14,6 @@ Asena.addCommand({pattern: 'grp', fromMe: true, deleteCommand: false,}, (async (
 }));
 }
 else if (Config.WORKTYPE == 'public') {
-  
   Asena.addCommand({pattern: 'grp', fromMe: false, deleteCommand: false,}, (async (message, match) => {
   var msg = await message.reply('```getting links...```');
   var groupimg = await axios.get(`https://telegra.ph/file/3073bc9bf04f00fead6a4.jpg`, { responseType: 'arraybuffer' })
