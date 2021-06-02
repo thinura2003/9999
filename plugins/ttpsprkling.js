@@ -14,7 +14,7 @@ const Config = require('../config');
 const NEED_WORD = "need some word"
     
 
-    Asena.addCommand({pattern: 'zp ?(.*)', fromMe: true,}, (async (message, match) => {
+    Asena.addCommand({pattern: 'zsp ?(.*)', fromMe: true,}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
   
@@ -24,7 +24,6 @@ const NEED_WORD = "need some word"
         bottomText = split[1];
         topText = split[0];
 }
-
     var webimage = await axios.get(`https://docs-jojo.herokuapp.com/api/sparkling?text1=${topText}&text2=${bottomText}`, { responseType: 'arraybuffer' })
 
     await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: '🚀Made by X-Troid ☄️'})
