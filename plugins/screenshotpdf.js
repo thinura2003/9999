@@ -25,7 +25,7 @@ if (Config.WORKTYPE == 'private') {
 
         var webimage = await axios.get(`https://docs-jojo.herokuapp.com/api/ssweb_pdf?url=${match[1]}`, { responseType: 'arraybuffer' })
 
-        await message.sendMessage(Buffer.from(webimage.data), MessageType.document, {mimetype: Mimetype.jpg, caption: 'Made by X-Troid'})
+        await message.sendMessage(Buffer.from(webimage.data), MessageType.file, {mimetype: Mimetype.jpg, caption: 'Made by X-Troid'})
 
     }));
 }
@@ -37,7 +37,7 @@ else if (Config.WORKTYPE == 'public') {
 
         var webimage = await axios.get(`https://docs-jojo.herokuapp.com/api/ssweb_pdf?url=${match[1]}`, { responseType: 'arraybuffer' })
 
-        await message.sendMessage(Buffer.from(webimage.data), MessageType.document, {mimetype: Mimetype.jpg, caption: 'Made by X-Troid.'})
+        await message.sendMessage(Buffer.from(webimage.data), MessageType.file, {mimetype: Mimetype.jpg, caption: 'Made by X-Troid.'})
 
     }));
 }
