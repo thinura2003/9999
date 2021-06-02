@@ -25,6 +25,17 @@ if (Config.WORKTYPE == 'private') {
         await message.sendMessage(Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.jpg, caption: '🚀Made by X-Troid ☄️' })
 
     }));
+    
+     Asena.addCommand({ pattern: 'br ?(.*)', fromMe: true,dontAddCommandList: true}, (async (message, match) => {
+
+        if (match[1] === '') return await message.sendMessage(ll);
+
+        var ttinullimage = await axios.get(`https://docs-jojo.herokuapp.com/api/barcode_maker?text=${encodeURIComponent(match[1])}`, { responseType: 'arraybuffer' })
+
+        await message.sendMessage(Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.jpg, caption: '🚀Made by X-Troid ☄️' })
+
+    }));
+    
 }
 
 else if (Config.WORKTYPE == 'public') {
@@ -34,6 +45,15 @@ else if (Config.WORKTYPE == 'public') {
         if (match[1] === '') return await message.sendMessage(ll);
 
         var ttinullimage = await axios.get(`https://docs-jojo.herokuapp.com/api/qrcode?text=${encodeURIComponent(match[1])}`, { responseType: 'arraybuffer' })
+
+        await message.sendMessage(Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.jpg, caption: '🚀Made by X-Troid ☄️' })
+
+    }));
+    Asena.addCommand({ pattern: 'br ?(.*)', fromMe: false,deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {
+
+        if (match[1] === '') return await message.sendMessage(ll);
+
+        var ttinullimage = await axios.get(`https://docs-jojo.herokuapp.com/api/barcode_maker?text=${encodeURIComponent(match[1])}`, { responseType: 'arraybuffer' })
 
         await message.sendMessage(Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.jpg, caption: '🚀Made by X-Troid ☄️' })
 
