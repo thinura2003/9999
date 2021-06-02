@@ -20,7 +20,7 @@ const lol = "need some word"
 
         if (match[1] === '') return await message.sendMessage(lol);
 
-        var ttinullimage = await axios.get(`https://docs-jojo.herokuapp.com/api/sparkling?text1=${match[1]}&text2=match[1]`, { responseType: 'arraybuffer' })
+        var ttinullimage = await axios.get(`https://docs-jojo.herokuapp.com/api/sparkling?text1=${match[1]}&text2=X-Troid`, { responseType: 'arraybuffer' })
 
         await message.sendMessage(Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.jpg, caption: '🚀Made by X-Troid ☄️' })
 
