@@ -12,9 +12,18 @@ const fs = require('fs');
 const axios = require('axios');
 const Config = require('../config');
 const ll ="*Need some Word*"
-
+const Ln = "Make memes your own\nඔබගේම මිම් සාදාගැනීමට "
+ const code = "╔════════════════════╗\n║   😹 *Meme World* 😹\n║\n║\n╠═══ *🎭commands🎭*\n║\n╠══ *.bocca*\n╠══ *.mymeme*\n╠══ *.santha*\n╠══ *.chaina*\n╠══ *.bomu*\n╠══ *.saduni*\n╠══ *.tharindu*\n║\n╚════════════════════╝"
 
 if (Config.WORKTYPE == 'private') {
+    
+      Asena.addCommand({pattern: 'meme', fromMe: true, desc: Ln,}, (async (message, match) => {
+
+    await message.client.sendMessage(
+  
+      message.jid,code, MessageType.text);
+  
+  }));
 
     Asena.addCommand({ pattern: 'bocca ?(.*)', fromMe: true, dontAddCommandList: true }, (async (message, match) => {
 
@@ -89,6 +98,14 @@ if (Config.WORKTYPE == 'private') {
 }
 
 else if (Config.WORKTYPE == 'public') {
+    
+        Asena.addCommand({pattern: 'meme', fromMe: false, desc: Ln,}, (async (message, match) => {
+
+    await message.client.sendMessage(
+  
+      message.jid,code, MessageType.text);
+  
+  }));
 
     Asena.addCommand({ pattern: 'bocca ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
 
