@@ -14,7 +14,7 @@ const Config = require('../config');
 const NEED_WORD = "need some word"
     
 
-    Asena.addCommand({pattern: 'zspark ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+    Asena.addCommand({pattern: 'zp ?(.*)', fromMe: true,}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
   
