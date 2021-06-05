@@ -1,4 +1,4 @@
-FROM sLdevilx/whatsasena:latest
+FROM sldevilx/whatsasena:latest
 
 RUN git clone https://github.com/X-TroidPVTGang/X-TroidPVT /root/X-TroidPVT
 WORKDIR /root/X-TroidPVT/
