@@ -8,8 +8,7 @@ Asena.addCommand({ pattern: '. ?(.*)', fromMe: true,  }, (async (message, match)
 	let url = `http://api.brainshop.ai/get?bid=156774&key=Il1vWd2F7AHZPalZ&uid=[uid]&msg=${match[1]}`
 	const response = await got(url);
 	const json = JSON.parse(response.body);
-	if (json.Response != 'True') return await message.client.sendMessage(message.jid, '*Not found.*', MessageType.text, { quoted: message.data });
 	let msg = '```';
-	msg += '' + json.cnt + '```';
+	msg += 'jj' + json.cnt + '```';
 	await message.client.sendMessage(message.jid, msg, MessageType.text, { quoted: message.data });
 }));
