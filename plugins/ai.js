@@ -2,6 +2,7 @@ const Asena = require('../events');
 const {MessageType,Mimetype} = require('@adiwajshing/baileys');
 const translatte = require('translatte');
 const config = require('../config');
+const axios = require('axios');
 const gg = "ask some thing"
 
 Asena.addCommand({ pattern: '.. ?(.*)', fromMe: true, deleteCommand: false,}, (async (message, match) => {
