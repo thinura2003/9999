@@ -1,13 +1,15 @@
+  
 const Asena = require('../events');
-const {MessageType,Mimetype} = require('@adiwajshing/baileys');
-const translatte = require('translatte');
-const config = require('../config');
-const axios = require('axios');
-const gg = "ask some thing"
+const { MessageType } = require('@adiwajshing/baileys');
+const got = require('got');
 
-Asena.addCommand({ pattern: '.. ?(.*)', fromMe: true, deleteCommand: false,}, (async (message, match) => {
-    if (match[1] === "") return await message.sendMessage(gg);
-    await axios.get(`http://api.brainshop.ai/get?bid=156774&key=Il1vWd2F7AHZPalZ&uid=[uid]&msg=${encodeURIComponent(match[1])}`).then(async (res) => {
-        await message.sendMessage(res.cnt, MessageType.text,)
-    })
+Asena.addCommand({ pattern: '. ?(.*)', fromMe: true,  }, (async (message, match) => {
+	if (match[1] === '') return await message.client.sendMessage(message.jid, '```Ask some thing.```', MessageType.text, { quoted: message.data });
+	let url = `http://api.brainshop.ai/get?bid=156774&key=Il1vWd2F7AHZPalZ&uid=[uid]&msg=${match[1]}`
+	const response = await got(url);
+	const json = JSON.parse(response.body);
+	if (json.Response != 'True') return await message.client.sendMessage(message.jid, '*Not found.*', MessageType.text, { quoted: message.data });
+	let msg = '```';
+	msg += '' + json.cnt + '```';
+	await message.client.sendMessage(message.jid, msg, MessageType.text, { quoted: message.data });
 }));
