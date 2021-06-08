@@ -1,4 +1,6 @@
-const Asena = require('../events');
+
+
+*/*const Asena = require('../events');
 const { MessageType, MessageOptions, Mimetype } = require('@adiwajshing/baileys');
 const got = require('got');
 const Config = require('../config');
@@ -18,3 +20,4 @@ Asena.addCommand({ pattern: 'tvd ?(.*)', fromMe: true, desc: "tiktok video downl
 	await message.sendMessage(Buffer.from(vid.data), MessageType.video,{ mimetype: Mimetype.mp4, caption: '🚀Made by X-Troid ☄️' })
 }));
 }
+*/*
