@@ -19,15 +19,8 @@ if (Config.WORKTYPE == 'private') {
     Asena.addCommand({ pattern: 'zaven ?(.*)', fromMe: true, dontAddCommandList: true, }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(need);
-        
-          var topText, bottomText;
-    if (match[1].includes('/')) {
-        var split = match[1].split('/');
-        bottomText = split[1];
-        topText = split[0];
-}
 
-        var ttinullimage = await axios.get(`https://api.${Config.CCRUN}.xyz/api/logoaveng?apikey=${Config.LOGO_KEY}&text1=${topText}text2=${bottomText}`, { responseType: 'arraybuffer' })
+        var ttinullimage = await axios.get(`https://api.${Config.CCRUN}.xyz/api/logoaveng?apikey=${Config.LOGO_KEY}&text1=X-Troid&text2=${encodeURIComponent(match[1])}`, { responseType: 'arraybuffer' })
 
         await message.sendMessage(Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.jpg, caption: '🚀Made by X-Troid ☄️' })
 
@@ -40,7 +33,7 @@ else if (Config.WORKTYPE == 'public') {
 
         if (match[1] === '') return await message.sendMessage(need);
 
-        var ttinullimage = await axios.get(`https://api.${Config.CCRUN}.xyz/api/logoaveng?apikey=${Config.LOGO_KEY}&text1=xxx&text2=${encodeURIComponent(match[1])}`, { responseType: 'arraybuffer' })
+        var ttinullimage = await axios.get(`https://api.${Config.CCRUN}.xyz/api/logoaveng?apikey=${Config.LOGO_KEY}&text1=X-Troid&text2=${encodeURIComponent(match[1])}`, { responseType: 'arraybuffer' })
 
         await message.sendMessage(Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.jpg, caption: '🚀Made by X-Troid ☄️' })
 
