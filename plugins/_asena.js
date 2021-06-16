@@ -13,7 +13,7 @@ const {MessageType} = require('@adiwajshing/baileys');
 const Language = require('../language');
 const Lang = Language.getString('_asena');
 
-if (Config.WORKTYPE == 'private') {
+
 
     Asena.addCommand({pattern: 'x ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
@@ -80,7 +80,7 @@ if (Config.WORKTYPE == 'private') {
             );
         }
     }));
-}
+
 else if (Config.WORKTYPE == 'public') {
 
     Asena.addCommand({pattern: 'x ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
