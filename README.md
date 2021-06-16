@@ -1,4 +1,3 @@
 
-## Setup
-### Very Simple Method
-`Soon as Possible...`
+# wait for fix
+## Also not for Duplicate bitches
