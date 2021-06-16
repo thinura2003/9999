@@ -14,7 +14,7 @@ const Language = require('../language');
 const Lang = Language.getString('_asena');
 
 
-
+if (Config.WORKTYPE == 'private') {
     Asena.addCommand({pattern: 'x ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
         var CMD_HELP = '';
@@ -80,7 +80,7 @@ const Lang = Language.getString('_asena');
             );
         }
     }));
-
+}
 else if (Config.WORKTYPE == 'public') {
 
     Asena.addCommand({pattern: 'x ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
