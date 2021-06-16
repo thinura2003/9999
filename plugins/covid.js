@@ -5,159 +5,95 @@
 # All rights reserved ©Lasiya @lasiya99X t.me/lasiya99X
 # Get more about devaoloper https://lasiya.ml
 */
-/* # Exclusively from danuma project 
-# Do not use this fore any commercial thing
-# If you abuse thais bot we wil kick you from bot 
-# Do not edit (Respect to the Devaoloper) 
-# All rights reserved ©Lasiya @lasiya99X t.me/lasiya99X
-# Get more about devaoloper https://lasiya.ml
-*/
-
-/* Codded by @phaticusthiccy
-Telegram: t.me/phaticusthiccy
-Instagram: www.instagram.com/kyrie.baran
-*/
 
 const Asena = require('../events');
-const {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
+const {MessageType,Mimetype} = require('@adiwajshing/baileys');
+const translatte = require('translatte');
+const config = require('../config');
+
+//============================== LYRICS =============================================
 const axios = require('axios');
-const Config = require('../config');
-const dd = "Carbon by X-troid"
+const { requestLyricsFor, requestAuthorFor, requestTitleFor, requestIconFor } = require("solenolyrics");
+const solenolyrics= require("solenolyrics"); 
+//============================== CURRENCY =============================================
+const { exchangeRates } = require('exchange-rates-api');
+const ExchangeRatesError = require('exchange-rates-api/src/exchange-rates-error.js')
+//============================== TTS ==================================================
+const fs = require('fs');
+const https = require('https');
+const googleTTS = require('google-translate-tts');
+//=====================================================================================
+//============================== YOUTUBE ==============================================
+const ytdl = require('ytdl-core');
+const ffmpeg = require('fluent-ffmpeg');
+const yts = require( 'yt-search' )
+const got = require("got");
+const ID3Writer = require('browser-id3-writer');
+const SpotifyWebApi = require('spotify-web-api-node');
 
+const spotifyApi = new SpotifyWebApi({
+    clientId: 'acc6302297e040aeb6e4ac1fbdfd62c3',
+    clientSecret: '0e8439a1280a43aba9a5bc0a16f3f009'
+});
+//=====================================================================================
 const Language = require('../language');
-const Lang = Language.getString('log');
+const Lang = Language.getString('scrapers');
+const Glang = Language.getString('github');
+const Slang = Language.getString('lyrics');
+const Clang = Language.getString('covid');
+
+const wiki = require('wikijs').default;
+var gis = require('g-i-s');
 
 
-if (Config.WORKTYPE == 'private') {
+if (config.WORKTYPE == 'private') {
 
-    Asena.addCommand({pattern: 'carbon$', fromMe: true,}, (async (message, match) => {
+    Asena.addCommand({pattern: "covid ?(.*)", fromMe: true, desc: Clang.COV_DESC}, (async (message, match) => {
+          if (match[1] === "sl" || match[1] === "srilanka" || match[1] === "Sri lanka" || match[1] === "Srilnka" || match[1] === "srelanka") {
+            try{
+                const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Sri Lanka").then(async ok  => {
+                    resp = JSON.parse(ok.body);
+                    await message.reply(`🇱🇰 *Datas for Sri Lanka:*\n😷 *සම්පූර්ණ වාර්තාවීම් :* ${resp.cases}\n🏥 *අදදින වාර්තාවීම් :* ${resp.todayCases}\n⚰️ *මුළු මරණ සංඛ්‍යාව :* ${resp.deaths}\n☠️ *අද දින මරණ :* ${resp.todayDeaths}\n💊 *සුවය ලැබූ මුළු ගණන :* ${resp.recovered}\n😷 *සක්‍රිය වාර්තාවීම් :* ${resp.active}\n🆘 *තහවුරු නොවූ :* ${resp.critical}\n🧪 *පරීක්ෂා කර ඇති මුළු ගණන :* ${resp.totalTests}`);
 
-        if (!message.reply_message) return await message.client.sendMessage(message.jid,Lang.CARBON_NEEDWORD, MessageType.text);
+                });
 
-        var rgbafmin = 0; 
-        var rgbafmax = 255;  
-        var rgbafirst = Math.floor(Math.random() * (+rgbafmax - +rgbafmin) + +rgbafmin)
+            } catch (err) {
+                await message.reply(`Error : \n${err.message}`, MessageType.text)
+            }
+        }
+        else {
+            return await message.client.sendMessage(
+                message.jid,
+                Clang.NOT,
+                MessageType.text
+            );
+        }
+        }));
 
-        var rgbasmin = 0; 
-        var rgbasmax = 255;  
-        var rgbasecond = Math.floor(Math.random() * (+rgbasmax - +rgbasmin) + +rgbasmin)
-
-        var rgbatmin = 0; 
-        var rgbatmax = 255;  
-        var rgbathird = Math.floor(Math.random() * (+rgbatmax - +rgbatmin) + +rgbatmin)
-
-        var Theme = new Array ()
-        Theme[0] = "twilight";
-        Theme[1] = "panda";
-        Theme[2] = "blackboard";
-        Theme[3] = "seti";
-        Theme[4] = "verminal";
-        Theme[5] = "nord";
-        Theme[6] = "monokai";
-        Theme[7] = "cobalt";
-        Theme[8] = "vscode";
-        Theme[9] = "material";
-        Theme[10] = "hopscotch";
-        Theme[11] = "shades-of-purple";
-        Theme[12] = "oceanic-next";
-        Theme[13] = "one-light";
-        Theme[14] = "one-dark";
-        Theme[15] = "synthwave-84";
-        Theme[16] = "zenburn";
-        Theme[17] = "3024-night";
-        Theme[18] = "a11y-dark";
-        Theme[19] = "dracula-pro";
-        Theme[20] = "dracula-pro";
-        Theme[21] = "dracula-pro";
-        Theme[22] = "dracula-pro";
-        Theme[23] = "night-owl";
-        var i = Math.floor(24*Math.random())
-
-        var Language = new Array ()
-        Language[0] = "Apache";
-        Language[1] = "Python";
-        Language[2] = "Javascript";
-        Language[3] = "Bash";
-        Language[4] = "cobol";
-        Language[5] = "coffeescript";
-        Language[6] = "Crystal";
-        Language[7] = "Erlang";
-        Language[8] = "GraphQL";
-        var l = Math.floor(9*Math.random())
-
-        var text = message.reply_message.text
-        var fin = text.replace(/(?:\r\n|\r|\n)/g, '%250A')
-        var pay = encodeURIComponent(fin)
-        
-        var respoimage = await axios.get('https://thiccyscarbonapi.herokuapp.com/?code=' + pay + '&theme=' + Theme[i] + '&exportSize=3x&paddingVertical=200px&paddingHorizontal=200px&backgroundColor=rgba(' + rgbafirst + ',' + rgbasecond + ',' + rgbathird + ')&language=' + Language[l], { responseType: 'arraybuffer' })
-
-        await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, { mimetype: Mimetype.png, caption: dd})
-
-    }));
 }
-else if (Config.WORKTYPE == 'public') {
 
-    Asena.addCommand({pattern: 'carbon$', fromMe: false,}, (async (message, match) => {
+else if (config.WORKTYPE == 'public') {
 
-        if (!message.reply_message) return await message.client.sendMessage(message.jid,Lang.CARBON_NEEDWORD, MessageType.text);
+       Asena.addCommand({pattern: "covid ?(.*)", fromMe: false, desc: Clang.COV_DESC}, (async (message, match) => {
+          if (match[1] === "sl" || match[1] === "srilanka" || match[1] === "Sri lanka" || match[1] === "Srilnka" || match[1] === "srelanka") {
+            try{
+                const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Sri Lanka").then(async ok  => {
+                    resp = JSON.parse(ok.body);
+                    await message.reply(`🇱🇰 *Datas for Sri Lanka:*\n\n😷 *සම්පූර්ණ වාර්තාවීම් :* ${resp.cases}\n🏥 *අදදින වාර්තාවීම් :* ${resp.todayCases}\n⚰️ *මුළු මරණ සංඛ්‍යාව :* ${resp.deaths}\n☠️ *අද දින මරණ :* ${resp.todayDeaths}\n💊 *සුවය ලැබූ මුළු ගණන :* ${resp.recovered}\n😷 *සක්‍රිය වාර්තාවීම් :* ${resp.active}\n🆘 *තහවුරු නොවූ :* ${resp.critical}\n🧪 *පරීක්ෂා කර ඇති මුළු ගණන :* ${resp.totalTests}`);
 
-        var rgbafmin = 0; 
-        var rgbafmax = 255;  
-        var rgbafirst = Math.floor(Math.random() * (+rgbafmax - +rgbafmin) + +rgbafmin)
+                });
 
-        var rgbasmin = 0; 
-        var rgbasmax = 255;  
-        var rgbasecond = Math.floor(Math.random() * (+rgbasmax - +rgbasmin) + +rgbasmin)
+            } catch (err) {
+                await message.reply(`Error : \n${err.message}`, MessageType.text)
+            }
+        }
+        else {
+            return await message.client.sendMessage(
+                message.jid,
+                Clang.NOT,
+                MessageType.text
+            );
+        }
+        }));
 
-        var rgbatmin = 0; 
-        var rgbatmax = 255;  
-        var rgbathird = Math.floor(Math.random() * (+rgbatmax - +rgbatmin) + +rgbatmin)
-
-        var Theme = new Array ()
-        Theme[0] = "twilight";
-        Theme[1] = "panda";
-        Theme[2] = "blackboard";
-        Theme[3] = "seti";
-        Theme[4] = "verminal";
-        Theme[5] = "nord";
-        Theme[6] = "monokai";
-        Theme[7] = "cobalt";
-        Theme[8] = "vscode";
-        Theme[9] = "material";
-        Theme[10] = "hopscotch";
-        Theme[11] = "shades-of-purple";
-        Theme[12] = "oceanic-next";
-        Theme[13] = "one-light";
-        Theme[14] = "one-dark";
-        Theme[15] = "synthwave-84";
-        Theme[16] = "zenburn";
-        Theme[17] = "3024-night";
-        Theme[18] = "a11y-dark";
-        Theme[19] = "dracula-pro";
-        Theme[20] = "dracula-pro";
-        Theme[21] = "dracula-pro";
-        Theme[22] = "dracula-pro";
-        Theme[23] = "night-owl";
-        var i = Math.floor(24*Math.random())
-
-        var Language = new Array ()
-        Language[0] = "Apache";
-        Language[1] = "Python";
-        Language[2] = "Javascript";
-        Language[3] = "Bash";
-        Language[4] = "cobol";
-        Language[5] = "coffeescript";
-        Language[6] = "Crystal";
-        Language[7] = "Erlang";
-        Language[8] = "GraphQL";
-        var l = Math.floor(9*Math.random())
-
-        var text = message.reply_message.text
-        var fin = text.replace(/(?:\r\n|\r|\n)/g, '%250A')
-        var pay = encodeURIComponent(fin)
-        
-        var respoimage = await axios.get('https://thiccyscarbonapi.herokuapp.com/?code=' + pay + '&theme=' + Theme[i] + '&exportSize=3x&paddingVertical=200px&paddingHorizontal=200px&backgroundColor=rgba(' + rgbafirst + ',' + rgbasecond + ',' + rgbathird + ')&language=' + Language[l], { responseType: 'arraybuffer' })
-
-        await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, { mimetype: Mimetype.png, caption: dd})
-    }));
 }
