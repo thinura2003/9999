@@ -5,10 +5,6 @@
 # Do not edit (Respect to the Devaoloper) 
 # All rights reserved ©Lasiya @lasiya99X t.me/lasiya99X
 # Get more about devaoloper https://lasiya.ml
-
-
-
-
 */
 
 const fs = require("fs");
